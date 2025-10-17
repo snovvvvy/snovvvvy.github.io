@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snow's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <div class="bg-animation" id="particles"></div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a class="logo" onclick="showPage('home')">❄️ snow</a>
+            <div class="nav-links">
+                <a onclick="showPage('home')" id="nav-home" class="active">Home</a>
+                <a onclick="showPage('projects')" id="nav-projects">Projects</a>
+                <a href="https://github.com/snovvvvy" target="_blank">GitHub</a>
+            </div>
+        </nav>
+
+        <!-- HOME PAGE -->
+        <div id="home-page" class="page active">
+            <header>
+                <h1>❄️ snow</h1>
+                <p class="subtitle">Roblox Scripter & Game Developer</p>
+            </header>
+
+            <div class="glass-card">
+                <h2>About Me</h2>
+                <p>Hey! I'm <strong>snow</strong>, a Roblox scripter who loves turning ideas into working pieces of
+                    code, things like simulators, shop UIs, and game mechanics. Every project I make teaches me
+                    something new about coding, teamwork, and game design.</p>
+
+                <p><strong>Goal:</strong> Build a massive collection of high-quality projects to level up my scripting
+                    skills.</p>
+
+                <ul>
+                    <li><strong>Skills:</strong> Luau (Roblox Studio), Rojo, a bit of UI design (roblox)</li>
+                    <!--<li><strong>Projects:</strong> Tycoons, simulators, combat systems, modular UI</li>-->
+                    <li><strong>Fun fact:</strong> I'll spend hours debugging one line of code just to see it finally
+                        work, and it's worth it.</li>
+                </ul>
+
+                <div class="links">
+                    <a href="https://github.com/snovvvvy" target="_blank" rel="noopener">My GitHub</a>
+                    <span>•</span>
+                    <a href="#" onclick="showPage('projects')" id="links-projects">Roblox Creations</a>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h2>Featured Projects</h2>
+                <div class="project-grid">
+                    <a href="https://www.roblox.com/games/133373053173708/Coin-Collector" target="_blank"
+                        rel="noopener">
+                        <div class="project-card">
+                            <h3>🪙 Coin Collector</h3>
+                            <p>Collect Coins on a platform!</p>
+                        </div>
+                    </a>
+                    <a href="https://www.roblox.com/games/88174802528648/Clicker-Game" target="_blank" 
+                        rel="noopener">
+                        <div class="project-card">
+                            <h3>👆 Clicker Base Game</h3>
+                            <p>Click Click Click!</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <footer>
+                <p>© 2025 snow • Built with passion and lots of debugging 🐛</p>
+            </footer>
+        </div>
+
+
+        <div id="projects-page" class="page">
+            <header>
+                <h1>My Projects</h1>
+                <p class="subtitle">A collection of everything I've built and learned from</p>
+            </header>
+
+            <div class="category-section">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <span class="category-icon">👆</span>
+                    <div class="category-title">
+                        <h2>Simulator Games</h2>
+                        <p class="category-count">2 projects</p>
+                    </div>
+                    <span class="expand-icon">▼</span>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <span class="project-status status-completed">Completed</span>
+                        <h3>Coin Collector Game</h3>
+                        <p>Collect coins on a platform, before others get it! (shop and tools coming soon!)</p>
+                        <div class="project-tags">
+                            <span class="tag">Luau</span>
+                            <span class="tag">DataStore</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <span class="project-status status-completed">Completed</span>
+                        <h3>Click the button!</h3>
+                        <p>Interactive game where players click a button to add clicks to their stats!</p>
+                        <div class="project-tags">
+                            <span class="tag">Simulator</span>
+                            <span class="tag">Clickdetector</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>© 2025 snow • Every project is a step forward 🚀</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
