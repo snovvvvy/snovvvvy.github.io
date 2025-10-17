@@ -1,1 +1,0 @@
-# snovvvvy.github.io
