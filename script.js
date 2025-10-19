@@ -1,6 +1,5 @@
-// Create floating particles
 const particlesContainer = document.getElementById('particles');
-const particleCount = 30;
+const particleCount = 40;
 
 for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement('div');
@@ -9,34 +8,29 @@ for (let i = 0; i < particleCount; i++) {
     const size = Math.random() * 60 + 20;
     particle.style.width = size + 'px';
     particle.style.height = size + 'px';
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.animationDelay = Math.random() * 15 + 's';
-    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+    particle.style.left = (Math.random() * 110 - 5) + '%';
+    particle.style.bottom = (Math.random() * -200 - 50) + 'px';
+    particle.style.animationDelay = Math.random() * 5 + 's';
+    particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
 
     particlesContainer.appendChild(particle);
 }
 
-// Page navigation
 function showPage(pageName) {
-    // Hide all pages
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
     });
 
-    // Remove active class from all nav links
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
     });
 
-    // Show selected page
     document.getElementById(pageName + '-page').classList.add('active');
     document.getElementById('nav-' + pageName).classList.add('active');
 
-    // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Toggle category expansion
 function toggleCategory(header) {
     const grid = header.nextElementSibling;
     const isExpanded = grid.classList.contains('expanded');
@@ -50,7 +44,6 @@ function toggleCategory(header) {
     }
 }
 
-// Add scroll animation
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -69,7 +62,6 @@ document.querySelectorAll('.glass-card').forEach(card => {
     observer.observe(card);
 });
 
-// Interactive hover effect on project cards
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -84,7 +76,6 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Stagger animation for category sections
 const categories = document.querySelectorAll('.category-section');
 categories.forEach((category, index) => {
     category.style.animationDelay = `${index * 0.1}s`;
